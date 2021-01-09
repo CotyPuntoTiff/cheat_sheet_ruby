@@ -212,3 +212,19 @@ Puede combinar operadores booleanos en sus expresiones.
 
 Es posible usar paréntesis para controlar el orden de evaluación. Las expresiones entre paréntesis siempre se evalúan antes que cualquier cosa fuera de paréntesis.
 
+                    LO INCLUYE? ".include?"
+
+Podemos hacerlo usando ".include" como método, este evalúa como verdadero si encuentra lo que está buscando y falso en caso contrario.
+
+        if string_to_check.include? "substring"
+
+(Como regla general, los métodos de Ruby que terminan con? Evalúan los valores booleanos verdadero o falso).
+
+                    SUSTITUCION GLOBAL ".gsub"
+
+si queremos reemplazar un String por otro, podemos hacerlo usando el metodo ".gsub", este sustituira a cada elemento, ejemplo 
+  reemplace cada instancia de "s" que encuentre con "th"
+
+        string_to_change.gsub!(/ s /, "th")
+
+¡no puede poner un ESPACIO entre gsub! y el bit entre paréntesis.

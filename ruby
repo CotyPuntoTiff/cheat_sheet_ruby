@@ -285,20 +285,22 @@ La siguiente palabra clave se puede utilizar para omitir ciertos pasos del ciclo
           print i                  en cambio con el next imprime los siguientes
         end                        1 3 5 
 
-                MATRIZ PARA GUARDAR MULTIPLES valores
+                ARRAY PARA GUARDAR MULTIPLES VALORES 
 
 Cuando tenemos una variable y a esta queremos ingresar varios valores, se utiliza la matriz, esta se idica con "[]", todo lo que este dentro de los corchetes sera parte de esta lista de elementos.
 
-[1, 2, 3, 4]
-[10, 31, 19, 400]
+        my_array = ['a','b','c','d']
+        my_array = [10, 31, 19, 400]
+
+Las Array pueden contener numeros, String, buleanos, etc.
 
                 ITERADOR ".each"
 
 El iterador de bucle es el más simple, pero también uno de los menos poderosos. Un iterador más útil es el método ".each", que puede aplicar una expresión a cada elemento de un objeto, uno a la vez.
 
-object.each do |item| 
-  # haz algo
-end
+        object.each do |item| 
+        # haz algo
+        end
 
 El nombre de la variable entre | | puede ser lo que quieras: es solo un marcador de posición para cada elemento del objeto en el que estás usando ".each".
 
@@ -314,5 +316,90 @@ Por ejemplo, si quisiéramos imprimir "¡Tocino con trozos!" diez veces, podría
 
 Existe un método incorporado para esto llamado ".split" toma una cadena y devuelve una matriz. Si le pasamos un poco de texto entre paréntesis, ".split" dividirá la cadena dondequiera que vea ese fragmento de texto, llamado delimitador.
 
-text.split(",")
+        text.split(",")
+
+                ACCESO POR INDEX    
+
+Aquí hay algo interesante sobre las Array, cada elemento de la Array tiene lo que se llama un índice. El primer elemento está en el índice 0, el siguiente en el índice 1, el siguiente en el índice 2, y así sucesivamente. Podemos acceder a elementos de la matriz directamente a través de estos números usando corchetes, así:
+
+        matriz = [5, 7, 9, 2, 0]
+        matriz [2]
+        devuelve "9", ya que "9"
+        está en el índice 2
+
+Las Array pueden contener numeros, String, buleanos, etc.
+
+                ARRAY DENTRO DE UN ARRAY (MATRIZ MULTIDIMENCIONAL)
+
+Quizás se esté preguntando: "Si puedo poner cualquier cosa en una matriz, ¿puedo hacer una matriz de matrices?" ¡La respuesta es sí!
+
+Las matrices de matrices se denominan matrices multidimensionales, ya que el acto de agregar más matrices expande la matriz fuera de su forma de cadena.
+
+        multi_d_array = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
+        multi_d_array.each { |x| puts "#{x}\n" }
+
+                HASHES
+
+Sabemos que las matrices están indexadas con números que comienzan con 0 y van hasta la longitud de la matriz menos uno. (Piénselo: una matriz con cuatro elementos tiene los índices 0, 1, 2 y 3.)
+
+Pero, ¿qué pasa si queremos usar índices numéricos que no van en orden desde 0 hasta el final de la matriz? ¿Qué pasa si no queremos usar números como índices en absoluto? Necesitaremos una nueva estructura de matriz llamada hash.
+
+Los valores se asignan a las teclas mediante =>. Puede usar cualquier objeto Ruby para una clave o valor.
+
+todo lo que necesita saber es que un hash es una colección de pares clave-valor. 
+
+        hash = {
+        key1 => value1,
+        key2 => value2,
+        key3 => value3
+        }
+
+También puede crear un hash usando Hash.new, así:
+
+        my_hash = Hash.new
+
+Podemos agregar a un hash de dos maneras: si lo creamos usando notación literal, simplemente podemos agregar un nuevo par clave-valor directamente entre las llaves. Si usamos Hash.new, podemos agregar al hash usando notación entre corchetes:
+
+        mascota = Hash.new
+        mascota["Stevie"] = "gato"
+
+Acceder a valores hash
+Puede acceder a los valores en un hash como una matriz.
+
+        mascotas = {
+        "Stevie" => "gato",
+        "Bowser" => "hámster",
+        "Kevin Sorbo" => "pez"
+        }
+ 
+pone mascotas ["Stevie"]
+# imprimirá "gato"
+En el ejemplo anterior, creamos un hash llamado mascotas.
+Luego imprimimos gato accediendo a la clave "Stevie" en el hash de mascotas.
+
+                ITERANDO SOBRE MATRICES
+
+Iterar sobre matrices es más fácil de lo que parece.
+
+números = [1, 2, 3, 4, 5]
+numeros.each {| elemento | pone elemento}
+En el ejemplo anterior, creamos una matriz llamada números con 5 elementos.
+Luego decimos: "Toma esta matriz y para cada elemento, imprímelo en la consola". Como de costumbre, podemos usar cualquier nombre de marcador de posición para el bit entre dos | | caracteres.
+
+            secret_identities = {
+            "The Batman" => "Bruce Wayne",
+            "Superman" => "Clark Kent",
+            "Wonder Woman" => "Diana Prince",
+            "Freakazoid" => "Dexter Douglas"
+            }
+            
+            secret_identities.each do |item, price|
+            puts "#{item}: #{price}"
+            end
+
+            The Batman: Bruce Wayne
+            Superman: Clark Kent
+            Wonder Woman: Diana Prince
+            Freakazoid: Dexter Douglas
 

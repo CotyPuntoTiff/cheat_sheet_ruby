@@ -228,3 +228,85 @@ si queremos reemplazar un String por otro, podemos hacerlo usando el metodo ".gs
         string_to_change.gsub!(/ s /, "th")
 
 ¡no puede poner un ESPACIO entre gsub! y el bit entre paréntesis.
+
+                    EL CICLO DE "while"
+
+repite una accion, hasta que se cumpla una determinada condición y resulte verdadera, pero no sabe cuántas veces tendrá que repetir esa acción. Un buen ejemplo sería pedirle a un usuario un cierto tipo de entrada: si insiste en darle algo incorrecto, es posible que deba volver a preguntarle varias veces antes de obtener el tipo de entrada que está buscando.
+
+Para lograr esto, usamos algo llamado ciclo while. Comprueba si una determinada condición es verdadera y, mientras lo es, el ciclo sigue funcionando. Tan pronto como la condición deja de ser cierta, ¡el ciclo se detiene!
+
+        counter = 1
+        while counter < 11
+          puts counter
+          counter = counter + 1
+        end
+
+Si nos olvidamos de tener un contador, se quedara pegado infinitamente, evitalo a toda costa.
+
+                    EL CICLO DE "for"
+
+Sin embargo, a veces sabes cuántas veces estarás haciendo un ciclo y, cuando ese sea el caso, deberas usar un ciclo for.
+
+        for num in 1...10
+        puts num
+        end
+
+                    RANGOS INCLUSIVOS Y EXCLUSIVOS
+
+Cuando le le indica un rango a...z, al utiliazar tres puntos significa que ira de la a hasta y, EXCLUIRA a z, en cambio si escribimos a..z, este rango ira de a hasta z.
+
+1...10
+1 2 3 4 5 6 7 8 9
+
+1..10
+1 2 3 4 5 6 7 8 9 10
+
+                    METODO "loop" CON "break"
+
+Un iterador es solo un método que invoca repetidamente un bloque de código. El bloque de código es solo el bit que contiene las instrucciones que se van a repetir, ¡y esas instrucciones pueden ser casi cualquier cosa que desee!
+
+El iterador más simple es el método de loop. Puede crear un loop básico (¡pero infinito!) Simplemente escribiendo
+
+        i = 0
+        loop do
+          i += 1
+          print "#{i}"
+          break if i > 5
+        end
+
+La palabra clave break es nuestra tarjeta de salida este rompe un loop tan pronto como se cumple su condición.
+
+                    PALABRA CLAVE "next" 
+
+La siguiente palabra clave se puede utilizar para omitir ciertos pasos del ciclo. Por ejemplo, si no queremos imprimir los números pares, podemos escribir:
+
+        for i in 1..5              sin el next estaria imprimiendo 
+          next if i % 2 == 0       1 2 3 4 5
+          print i                  en cambio con el next imprime los siguientes
+        end                        1 3 5 
+
+                MATRIZ PARA GUARDAR MULTIPLES valores
+
+Cuando tenemos una variable y a esta queremos ingresar varios valores, se utiliza la matriz, esta se idica con "[]", todo lo que este dentro de los corchetes sera parte de esta lista de elementos.
+
+[1, 2, 3, 4]
+[10, 31, 19, 400]
+
+                ITERADOR ".each"
+
+El iterador de bucle es el más simple, pero también uno de los menos poderosos. Un iterador más útil es el método ".each", que puede aplicar una expresión a cada elemento de un objeto, uno a la vez.
+
+object.each do |item| 
+  # haz algo
+end
+
+El nombre de la variable entre | | puede ser lo que quieras: es solo un marcador de posición para cada elemento del objeto en el que estás usando ".each".
+
+                ITERADOR ".times"
+
+El método .times es como un bucle for super compacto: puede realizar una tarea en cada elemento de un objeto un número específico de veces.
+
+Por ejemplo, si quisiéramos imprimir "¡Tocino con trozos!" diez veces, podríamos escribir
+
+10.times{print "¡Tocino con trozos!" }
+

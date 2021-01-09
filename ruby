@@ -310,3 +310,9 @@ Por ejemplo, si quisiéramos imprimir "¡Tocino con trozos!" diez veces, podría
 
 10.times{print "¡Tocino con trozos!" }
 
+                METODO ".split"
+
+Existe un método incorporado para esto llamado ".split" toma una cadena y devuelve una matriz. Si le pasamos un poco de texto entre paréntesis, ".split" dividirá la cadena dondequiera que vea ese fragmento de texto, llamado delimitador.
+
+text.split(",")
+

@@ -1,4 +1,4 @@
-                    LO BASICO
+------------------ LO BASICO
 
 my_num = 25    # numero
 
@@ -6,12 +6,12 @@ my_boolean = true    # buleano
 
 my_string = "ruby"    # string, palabras
 
-                    VARIABLES
+------------------ VARIABLES
 
 Las variables son nombres que alojan un valor, donde se le asigna el valor con un signo igual "=", donde se puede sobre escribir con "=" para sobre escribir el valor
 my_num = 25
 
-                    MATEMATICAS
+------------------ MATEMATICAS
 
 Es capaz de ejecutar todas las operaciones matematicas aprendidas en el colegio, respetando siempre el orden ( *,/ y luego +,-) los operadores son:
 
@@ -27,33 +27,33 @@ Exponentiation (**) Exponencial
 
 Modulo (%) Modulo o resto
 
-                    PUTS Y PRINT 
+------------------ PUTS Y PRINT 
 
 Muestra un String, ambos realizan la misma accion, pero print es hacia el lado y puts con un salto de linea
 
 print 'hola!'
 puts 'como estas?'
 
-                    LOS METODOS
+------------------ LOS METODOS
 
 Ruby contiene habilidades integradas llamadas METODOS, se puede pensar como si fueran 'habilidades' que tienen ciertos objetos, por ejemplo en los Strings, un metodo puede indicarte la longitud de la cadena, invertir la cadena y mas.
 
 En Ruby se pueden aplicar distintos metodos a una variable.
 nombre.metodo1.metodo2.metodo3
 
-                    EL METODO ".length' 
+------------------ EL METODO ".length' 
 
 Se convoca con un "."despues de un String y le pones el metodo, este te retorna la longitud de este (es decir, el número de caracteres: letras, números, espacios y símbolos).
 puts 'constanza'.length
 9
 
-                    METODO ".reverse"
+------------------ METODO ".reverse"
 
 Este metodo te devuelve el String escrito a la inversa, la que era la ultima letra la retorna como la primera
 puts 'constanza'.reverse 
 'aznatsnoc'
 
-                    METODO ".upcase' Y ".downcase"
+------------------ METODO ".upcase' Y ".downcase"
 
 estos dos metodos se usan en String, donde convierten las letras a mayusculas o minusculas respectivamente
 
@@ -62,7 +62,7 @@ CONSTANZA
 puts 'CONSTANZA'.downcase
 constanza
 
-                    COMENTARIOS
+------------------ COMENTARIOS
 
 Puedes realizar comentarios de una linea usando "#"
 # hola!!
@@ -73,25 +73,25 @@ este es un comentario!
 de muchas lineas.
 =end
 
-                    CONVENCIONES DE LAS VARIABLES
+------------------ CONVENCIONES DE LAS VARIABLES
 
 Existen diversos tipos de variables, por convencion estas deven comenzar con letra minuscula y las palabras deben estar separadas por guiones bajos "_".
 
 Ruby no impedira que empieces con simbolos o con letras mayusculas, pero no es correcto, ya que significan cosas diferentes, es mejor evitar confuciones.
 
 
-                    VARIABLES Y TIPOS DE DATOS  
+------------------ VARIABLES Y TIPOS DE DATOS  
 
 Puedes alojar un String "usando comillas" o un numero (sin uso de comillas u otro caracter).
 
 Se le puede aplicar varios metodos a la vez
 nombre.metodo1.metodo2.metodo3
 
-                    USANDO GETS
+------------------ USANDO GETS
 
 al usar gets recibe la entrada del usuario en el terminal, no avanzara hasta que reciba una respuesta y le de ENTER o RETURN, agrega automaticamente una linea en blanco, por lo cual usaremos ".chomp" para eliminar esa linea extra.
 
-                    INTERPOLANDO
+------------------ INTERPOLANDO
 
 Si defino una variable y luego ubicandola dentro de una cadena usando #{variable}, el programa remplazara la variable por el valor de este.
 
@@ -99,15 +99,15 @@ mono = "Jorge el curioso"
 puts "Lleve a #{mono} al zoologico"
 Lleve a Jorge el curioso al zoologico
 
-                    METODO ".capitalize"
+------------------ METODO ".capitalize"
 
 Este metodo convierte la primera letra de un String en mayusculas, las siguientes en minusculas
 
-                    COMO UTILIZAR EL "!"
+------------------ COMO UTILIZAR EL "!"
 
 Este simbolo se utiliza para aplicar un metodo y que el resultado de este se aloje en la misma variable, asi no le asignamos otra variable.
 
-                    UTILIZANDO EL "if"
+------------------ UTILIZANDO EL "if"
 
 La declaración if de Ruby toma una expresión, se traduce como "si este".
 
@@ -122,7 +122,7 @@ A Ruby no le importan los espacios en blanco (espacios y líneas en blanco), por
 El bloque de código que sigue a if debe tener una sangría de dos espacios.
 Cuando haya terminado con su if, debe decírselo a Ruby escribiendo end.
 
-                    USANDO "if" Y "else"
+------------------ USANDO "if" Y "else"
 
 El socio de la instrucción "if" es la instrucción else. 
 Una declaración if / else le dice a Ruby: “Si esta expresión es verdadera, ejecute este bloque de código; de lo contrario, ejecute el código después de la instrucción else ". 
@@ -133,7 +133,7 @@ Una declaración if / else le dice a Ruby: “Si esta expresión es verdadera, e
            print "¡Eso significa que me imprimirán!"
          end
 
-                    USANDO "if", "else" Y "elsif"
+------------------ USANDO "if", "else" Y "elsif"
 
 Es la tercer acompanante y ultimo del "if", la declaracion "elsif" puede agregar cualquier número de alternativas a una declaración if / else.
 
@@ -145,7 +145,7 @@ Es la tercer acompanante y ultimo del "if", la declaracion "elsif" puede agregar
            puts "es igual a y!"
          end
 
-                    USANDO "unless"
+------------------ USANDO "unless"
 
 A veces, desea utilizar el flujo de control para comprobar si algo es falso, en lugar de si es cierto. Podrías revertir tu if / else, pero Ruby te hará algo mejor: te permitirá usar una declaración a menos que.
 
@@ -157,7 +157,7 @@ Supongamos que no quiere comer a menos que tenga hambre. Es decir, mientras no t
            # Ten algunos dulces
          end
 
-                    IGUALDAD O NO? "==" O "!="
+------------------ IGUALDAD O NO? "==" O "!="
 
 En Ruby, asignamos valores a las variables usando =, el operador de asignación. Pero si ya usamos = para la asignación, ¿cómo verificamos si dos cosas son iguales? Bueno, usamos ==, que es un comparador (también llamado operador relacional). == significa "es igual a".
 
@@ -174,7 +174,7 @@ Para indicar que no son iguales se usara el "!="
 
         is_false = 2 == 3
 
-                    MAYOR O MENOS QUE
+------------------ MAYOR O MENOS QUE
 
 También podemos comprobar si un valor es menor, menor o igual, mayor o mayor o igual que otro. Esos operadores se ven así:
 
@@ -183,7 +183,7 @@ También podemos comprobar si un valor es menor, menor o igual, mayor o mayor o 
 >   Mayor que
 >=  Mayor o igual 
 
-                    Y "&&" O "||" NO ES "!"
+------------------ Y "&&" O "||" NO ES "!"
 
 También puede utilizar operadores lógicos o booleanos. Ruby tiene tres: y (&&), o (||), y no (!). Los operadores booleanos dan como resultado valores booleanos: verdadero o falso.
 
@@ -212,7 +212,7 @@ Puede combinar operadores booleanos en sus expresiones.
 
 Es posible usar paréntesis para controlar el orden de evaluación. Las expresiones entre paréntesis siempre se evalúan antes que cualquier cosa fuera de paréntesis.
 
-                    LO INCLUYE? ".include?"
+------------------ LO INCLUYE? ".include?"
 
 Podemos hacerlo usando ".include" como método, este evalúa como verdadero si encuentra lo que está buscando y falso en caso contrario.
 
@@ -220,7 +220,7 @@ Podemos hacerlo usando ".include" como método, este evalúa como verdadero si e
 
 (Como regla general, los métodos de Ruby que terminan con? Evalúan los valores booleanos verdadero o falso).
 
-                    SUSTITUCION GLOBAL ".gsub"
+------------------ SUSTITUCION GLOBAL ".gsub"
 
 si queremos reemplazar un String por otro, podemos hacerlo usando el metodo ".gsub", este sustituira a cada elemento, ejemplo 
   reemplace cada instancia de "s" que encuentre con "th"
@@ -229,7 +229,7 @@ si queremos reemplazar un String por otro, podemos hacerlo usando el metodo ".gs
 
 ¡no puede poner un ESPACIO entre gsub! y el bit entre paréntesis.
 
-                    EL CICLO DE "while"
+------------------ EL CICLO DE "while"
 
 repite una accion, hasta que se cumpla una determinada condición y resulte verdadera, pero no sabe cuántas veces tendrá que repetir esa acción. Un buen ejemplo sería pedirle a un usuario un cierto tipo de entrada: si insiste en darle algo incorrecto, es posible que deba volver a preguntarle varias veces antes de obtener el tipo de entrada que está buscando.
 
@@ -243,7 +243,7 @@ Para lograr esto, usamos algo llamado ciclo while. Comprueba si una determinada 
 
 Si nos olvidamos de tener un contador, se quedara pegado infinitamente, evitalo a toda costa.
 
-                    EL CICLO DE "for"
+------------------ EL CICLO DE "for"
 
 Sin embargo, a veces sabes cuántas veces estarás haciendo un ciclo y, cuando ese sea el caso, deberas usar un ciclo for.
 
@@ -251,7 +251,7 @@ Sin embargo, a veces sabes cuántas veces estarás haciendo un ciclo y, cuando e
         puts num
         end
 
-                    RANGOS INCLUSIVOS Y EXCLUSIVOS
+------------------ RANGOS INCLUSIVOS Y EXCLUSIVOS
 
 Cuando le le indica un rango a...z, al utiliazar tres puntos significa que ira de la a hasta y, EXCLUIRA a z, en cambio si escribimos a..z, este rango ira de a hasta z.
 
@@ -261,7 +261,7 @@ Cuando le le indica un rango a...z, al utiliazar tres puntos significa que ira d
 1..10
 1 2 3 4 5 6 7 8 9 10
 
-                    METODO "loop" CON "break"
+------------------ METODO "loop" CON "break"
 
 Un iterador es solo un método que invoca repetidamente un bloque de código. El bloque de código es solo el bit que contiene las instrucciones que se van a repetir, ¡y esas instrucciones pueden ser casi cualquier cosa que desee!
 
@@ -276,7 +276,7 @@ El iterador más simple es el método de loop. Puede crear un loop básico (¡pe
 
 La palabra clave break es nuestra tarjeta de salida este rompe un loop tan pronto como se cumple su condición.
 
-                    PALABRA CLAVE "next" 
+------------------ PALABRA CLAVE "next" 
 
 La siguiente palabra clave se puede utilizar para omitir ciertos pasos del ciclo. Por ejemplo, si no queremos imprimir los números pares, podemos escribir:
 
@@ -285,7 +285,7 @@ La siguiente palabra clave se puede utilizar para omitir ciertos pasos del ciclo
           print i                  en cambio con el next imprime los siguientes
         end                        1 3 5 
 
-                ARRAY PARA GUARDAR MULTIPLES VALORES 
+------------------ ARRAY PARA GUARDAR MULTIPLES VALORES 
 
 Cuando tenemos una variable y a esta queremos ingresar varios valores, se utiliza la matriz, esta se idica con "[]", todo lo que este dentro de los corchetes sera parte de esta lista de elementos.
 
@@ -294,7 +294,7 @@ Cuando tenemos una variable y a esta queremos ingresar varios valores, se utiliz
 
 Las Array pueden contener numeros, String, buleanos, etc.
 
-                ITERADOR ".each"
+------------------ ITERADOR ".each"
 
 El iterador de bucle es el más simple, pero también uno de los menos poderosos. Un iterador más útil es el método ".each", que puede aplicar una expresión a cada elemento de un objeto, uno a la vez.
 
@@ -304,7 +304,7 @@ El iterador de bucle es el más simple, pero también uno de los menos poderosos
 
 El nombre de la variable entre | | puede ser lo que quieras: es solo un marcador de posición para cada elemento del objeto en el que estás usando ".each".
 
-                ITERADOR ".times"
+------------------ ITERADOR ".times"
 
 El método .times es como un bucle for super compacto: puede realizar una tarea en cada elemento de un objeto un número específico de veces.
 
@@ -312,13 +312,13 @@ Por ejemplo, si quisiéramos imprimir "¡Tocino con trozos!" diez veces, podría
 
 10.times{print "¡Tocino con trozos!" }
 
-                METODO ".split"
+------------------ METODO ".split"
 
 Existe un método incorporado para esto llamado ".split" toma una cadena y devuelve una matriz. Si le pasamos un poco de texto entre paréntesis, ".split" dividirá la cadena dondequiera que vea ese fragmento de texto, llamado delimitador.
 
         text.split(",")
 
-                ACCESO POR INDEX    
+------------------ ACCESO POR INDEX    
 
 Aquí hay algo interesante sobre las Array, cada elemento de la Array tiene lo que se llama un índice. El primer elemento está en el índice 0, el siguiente en el índice 1, el siguiente en el índice 2, y así sucesivamente. Podemos acceder a elementos de la matriz directamente a través de estos números usando corchetes, así:
 
@@ -329,7 +329,7 @@ Aquí hay algo interesante sobre las Array, cada elemento de la Array tiene lo q
 
 Las Array pueden contener numeros, String, buleanos, etc.
 
-                ARRAY DENTRO DE UN ARRAY (MATRIZ MULTIDIMENCIONAL)
+------------------ ARRAY DENTRO DE UN ARRAY (MATRIZ MULTIDIMENCIONAL)
 
 Quizás se esté preguntando: "Si puedo poner cualquier cosa en una matriz, ¿puedo hacer una matriz de matrices?" ¡La respuesta es sí!
 
@@ -339,7 +339,7 @@ Las matrices de matrices se denominan matrices multidimensionales, ya que el act
 
         multi_d_array.each { |x| puts "#{x}\n" }
 
-                HASHES
+------------------ HASHES
 
 Sabemos que las matrices están indexadas con números que comienzan con 0 y van hasta la longitud de la matriz menos uno. (Piénselo: una matriz con cuatro elementos tiene los índices 0, 1, 2 y 3.)
 
@@ -378,7 +378,7 @@ pone mascotas ["Stevie"]
 En el ejemplo anterior, creamos un hash llamado mascotas.
 Luego imprimimos gato accediendo a la clave "Stevie" en el hash de mascotas.
 
-                ITERANDO SOBRE MATRICES
+------------------ ITERANDO SOBRE MATRICES
 
 Iterar sobre matrices es más fácil de lo que parece.
 
@@ -398,8 +398,94 @@ Luego decimos: "Toma esta matriz y para cada elemento, imprímelo en la consola"
             puts "#{item}: #{price}"
             end
 
+    en consola
             The Batman: Bruce Wayne
             Superman: Clark Kent
             Wonder Woman: Diana Prince
             Freakazoid: Dexter Douglas
+
+------------------ DEFINIR CON "def"
+
+Los métodos se definen utilizando la palabra clave def (abreviatura de "definir"). Los métodos tienen tres partes:
+
+- El encabezado, que incluye la palabra clave def, el nombre del método y cualquier argumento que tome el método.
+
+- El cuerpo, que es el bloque de código que describe los procedimientos que realiza el método. El cuerpo tiene una sangría de dos espacios por convención (como con las declaraciones for, if, elsif y else)
+
+- El método termina con la palabra clave end.
+A continuación, se muestra un ejemplo de cómo se vería la sintaxis para una función simple
+
+            def method_name
+                puts "Bienvenido a Ruby!"
+            end
+
+
+------------------ PARAMETROS Y ARGUMENTOS DE "def"
+
+Si un método toma argumentos, decimos que acepta o espera esos argumentos. Podríamos definir una función, cuadrada, así:
+
+            def cuadrado (n)
+            puts n ** 2
+            end
+            y llámalo así:
+
+            cuadrado (12)
+            # ==> print "144"
+
+El ARGUMENTO es el fragmento de código que pones entre los paréntesis del método cuando lo llamas, y el PARAMETRO es el nombre que pones entre los paréntesis del método cuando lo defines. Por ejemplo, cuando definimos el cuadrado arriba, le dimos el parámetro n (para "número") y le pasamos el argumento 12 cuando lo llamamos.
+
+Puede pensar en los PARAMETROS COMO MARCADORES DE POSICION que la definición del método proporciona a los argumentos, ya que no sabe de antemano exactamente qué argumento obtendrá.
+
+Los paréntesis suelen ser opcionales en Ruby, pero es una buena idea poner sus parámetros y argumentos entre paréntesis para facilitar la lectura.
+
+En el siguiente ejemplo, definimos un nuevo método llamado double que acepta un argumento llamado n.
+Dentro del método, devolvemos dos veces n.
+Después de eso, llamamos a nuestro nuevo método doble con un argumento de 6 y almacenamos el resultado, 12, en la salida.
+Luego, aumentamos la salida a 14 y la imprimimos en la consola.
+
+                def double(n)
+                return n * 2
+                end
+                
+                output = double(6)
+                output += 2
+                puts output
+
+------------------ Splat
+
+Los métodos no saben qué argumentos van a obtener con anticipación, sino que, ocasionalmente, ni siquiera saben cuántos argumentos habrá.
+
+Digamos que tienes un método, "amigo", que pone el argumento que recibe del usuario. Podría verse algo como esto:
+
+            def amigo (nombre):
+            puts "Mi amigo es" + nombre + "."
+            end 
+
+Esto es genial para un solo amigo, pero ¿qué sucede si desea imprimir todos los amigos del usuario, sin saber cuántos nombres de amigos ingresará el usuario de antemano?
+
+La solución: argumentos de splat. Los argumentos Splat son argumentos precedidos por un *, que le dice al programa que el método puede recibir uno o más argumentos.
+
+            def what_up (saludo, * amigos)
+            friends.each {| amigo | puts "# {saludo}, # {amigo}" }
+            end
+
+            what_up ("Qué pasa", "Ian", "Zoe", "Zenas", "Eleanor")
+
+    en consola
+            ¡Qué pasa, Ian!
+            ¡Qué pasa, Zoe!
+            ¡Qué tal, Zenas!
+            ¡Qué pasa, Eleanor!
+
+------------------ METODO ".sort"
+El método de matriz .sort se utiliza para ordenar los elementos de una matriz en orden ascendente (de menor a mayor)(de la a a la z)
+
+------------------ OPERADOR DE COMPARACION COMBINADA "<=>"
+
+El operador de comparación combinada
+También podemos usar un nuevo operador llamado operador de comparación combinado para comparar dos objetos Ruby. El operador de comparación combinado tiene este aspecto: <=>. Devuelve 0 si el primer operando (elemento a comparar) es igual al segundo, 1 si el primer operando es mayor que el segundo y -1 si el primer operando es menor que el segundo.
+
+si me da 1 me ordenara de forma ascendente, si es -1 sera en forma descendente. 
+
+Un bloque que se pasa al método de ".sort" (clasificación) debe devolver 1, 0 o -1. Debería devolver -1 si el primer parámetro de bloque debe ir antes que el segundo, 1 si es al revés y 0 si tienen el mismo peso, lo que significa que uno no viene antes que el otro (es decir, si dos valores son iguales)
 

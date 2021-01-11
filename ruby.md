@@ -1,4 +1,4 @@
------------------- LO BASICO
+# LO BASICO
 
 my_num = 25    # numero
 
@@ -6,12 +6,11 @@ my_boolean = true    # buleano
 
 my_string = "ruby"    # string, palabras
 
------------------- VARIABLES
+# VARIABLES
 
 Las variables son nombres que alojan un valor, donde se le asigna el valor con un signo igual "=", donde se puede sobre escribir con "=" para sobre escribir el valor
 my_num = 25
-
------------------- MATEMATICAS
+# MATEMATICAS
 
 Es capaz de ejecutar todas las operaciones matematicas aprendidas en el colegio, respetando siempre el orden ( *,/ y luego +,-) los operadores son:
 
@@ -27,7 +26,7 @@ Exponentiation (**) Exponencial
 
 Modulo (%) Modulo o resto
 
------------------- PUTS Y PRINT 
+# PUTS Y PRINT 
 
 Muestra un String, ambos realizan la misma accion, pero print es hacia el lado y puts con un salto de linea
 
@@ -349,32 +348,33 @@ Los valores se asignan a las teclas mediante =>. Puede usar cualquier objeto Rub
 
 todo lo que necesita saber es que un hash es una colección de pares clave-valor. 
 
-        hash = {
-        key1 => value1,
-        key2 => value2,
-        key3 => value3
-        }
+            hash = {
+            key1 => value1,
+            key2 => value2,
+            key3 => value3
+            }
 
 También puede crear un hash usando Hash.new, así:
 
-        my_hash = Hash.new
+            my_hash = Hash.new
 
 Podemos agregar a un hash de dos maneras: si lo creamos usando notación literal, simplemente podemos agregar un nuevo par clave-valor directamente entre las llaves. Si usamos Hash.new, podemos agregar al hash usando notación entre corchetes:
 
-        mascota = Hash.new
-        mascota["Stevie"] = "gato"
+            mascota = Hash.new
+            mascota["Stevie"] = "gato"
 
 Acceder a valores hash
 Puede acceder a los valores en un hash como una matriz.
 
-        mascotas = {
-        "Stevie" => "gato",
-        "Bowser" => "hámster",
-        "Kevin Sorbo" => "pez"
-        }
+            mascotas = {
+                "Stevie" => "gato",
+                "Bowser" => "hámster",
+                "Kevin Sorbo" => "pez"
+             }
  
-pone mascotas ["Stevie"]
-# imprimirá "gato"
+            puts mascotas ["Stevie"]
+            # imprimirá "gato"
+
 En el ejemplo anterior, creamos un hash llamado mascotas.
 Luego imprimimos gato accediendo a la clave "Stevie" en el hash de mascotas.
 
@@ -382,8 +382,9 @@ Luego imprimimos gato accediendo a la clave "Stevie" en el hash de mascotas.
 
 Iterar sobre matrices es más fácil de lo que parece.
 
-números = [1, 2, 3, 4, 5]
-numeros.each {| elemento | pone elemento}
+            números = [1, 2, 3, 4, 5]
+            numeros.each {| elemento | push elemento}
+
 En el ejemplo anterior, creamos una matriz llamada números con 5 elementos.
 Luego decimos: "Toma esta matriz y para cada elemento, imprímelo en la consola". Como de costumbre, podemos usar cualquier nombre de marcador de posición para el bit entre dos | | caracteres.
 
@@ -478,7 +479,7 @@ La solución: argumentos de splat. Los argumentos Splat son argumentos precedido
             ¡Qué pasa, Eleanor!
 
 ------------------ METODO ".sort"
-El método de matriz .sort se utiliza para ordenar los elementos de una matriz en orden ascendente (de menor a mayor)(de la a a la z)
+El método de matriz .sort se utiliza para ordenar los elementos de una matriz en orden ascendente (de menor a mayor)(de la a a la z), no pueden estar mezclados los datos, o son numericos o de tipo String.
 
 ------------------ OPERADOR DE COMPARACION COMBINADA "<=>"
 

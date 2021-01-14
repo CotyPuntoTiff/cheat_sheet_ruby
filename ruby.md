@@ -298,15 +298,6 @@ Cuando tenemos una variable y a esta queremos ingresar varios valores, se utiliz
 ```
 Las Array pueden contener numeros, String, buleanos, etc.
 
-### ITERADOR ".each"
-
-El iterador de bucle es el más simple, pero también uno de los menos poderosos. Un iterador más útil es el método ".each", que puede aplicar una expresión a cada elemento de un objeto, uno a la vez.
-```ruby
-         object.each do |item| 
-         # haz algo
-         end
-```
-El nombre de la variable entre | | puede ser lo que quieras: es solo un marcador de posición para cada elemento del objeto en el que estás usando ".each".
 
 ### ITERADOR ".times"
 
@@ -495,3 +486,125 @@ si me da 1 me ordenara de forma ascendente, si es -1 sera en forma descendente.
 
 Un bloque que se pasa al método de ".sort" (clasificación) debe devolver 1, 0 o -1. Debería devolver -1 si el primer parámetro de bloque debe ir antes que el segundo, 1 si es al revés y 0 si tienen el mismo peso, lo que significa que uno no viene antes que el otro (es decir, si dos valores son iguales)
 
+### ITERADOR ".each"
+
+El iterador de bucle es el más simple, pero también uno de los menos poderosos. Un iterador más útil es el método ".each", que puede aplicar una expresión a cada elemento de un objeto, uno a la vez.
+```ruby
+         object.each do |item| 
+         # haz algo
+         end
+```
+El nombre de la variable entre | | puede ser lo que quieras: es solo un marcador de posición para cada elemento del objeto en el que estás usando ".each".
+
+## HASH
+
+funciona como si fuera un diccionario, donde tiene su nombre y su definicion (valor que podria ser su significado), podemos asignale el valor a la variable con {} y llamarlo usando corchetes '[]'
+
+```ruby
+hash = {}
+hash = hash.new
+```
+Se le asigna un Rocket "=>"
+```ruby
+hash = {' nombre' => 'coty', 'edad' => 20 }
+puts hash[edad]
+puts hash[nombre]
+```
+```ruby
+alumnos = {
+  'coty' => 10
+  'ricardo' => 10
+  'deyna' => 8
+  'david' =>7
+  'joaquin' => [10,5,9,8]
+  'vicente' =>{
+    'fullstack' => 9
+    'datascience' => 8
+  }
+}
+```
+#### ACCEDER A UN ELEMENTO DENTRO DE UN "hash"
+Podemos acceder a un elemento específico utilizando la clave. Tiene que ser exactamente la misma clave ingresada.
+```ruby
+alumnos = {'Gonzalo' => 20}
+alumnos['Gonzalo'] # 20
+alumnos['gonzalo'] # nil
+```
+Si cambiamos algún detalle en la clave, Ruby lo entiende como una clave distinta y accederemos al
+valor correspondiente.
+
+#### LA CLAVE TIENE QUE SER UNICA 
+En un diccionario solo puede haber un valor asociado a una clave
+``` ruby
+alumnos = {'David' => 32, 'David' => 32}
+#(irb):6: warning: key :David is duplicated and overwritten on line 6
+```
+Si hubiesen dos claves iguales Ruby no podría saber que valor estamos intentando rescatar
+
+#### AGREGAR ELEMENTO EN EL HASH
+
+si la llave no existe, la crea y le asigna el valor, pero si la llave existe reemplaza el valor anterior con el nuevo
+```ruby
+hash('mascota') = 'gatito' 
+```
+#### CAMBIANDO UN VALOR DENTRO DE UN HASH
+Podemos cambiar un elemento dentro de un hash utilizando la misma sintaxis pero utilizando una clave existente.
+```ruby
+a = {'clave1'=>5, 'clave2'=>7}
+a['clave2'] = 9
+puts a # {'llave1'=>5, 'llave2'=>9}
+```
+### SIMBOLOS
+
+Los símbolo son similares a los strings, pero son más simples. Soportan menos operaciones y sirven para representar estados o valores que no pueden cambiar como las llaves en los hashes
+``` ruby
+hash_sym = { nombre: 'diego', edad: 20} #esa recomienda diego
+hash_sym = { :nombre => 'diego', :edad => 20}
+hash_symbol = {nombre: :diego, edad: :veinte}
+```
+### CREANDO UN NUEVO ARRAY CON ".map"
+
+El método .map entrega un nuevo array con el resultado del bloque aplicado a cada elemento. No modifica el array original.
+
+``` ruby   
+a = [1, 2, 3, 4, 5, 6, 7]
+b = a.map do |e|
+e * 2
+end
+# O con bloque inline
+b = a.map { |e| e * 2 }
+```
+
+### FILTRANDO CON ".select"
+
+Filtra con una condicion
+```ruby
+a = [1, 2, 3, 4, 5, 6, 7]
+b = a.select{ |x| x % 2 == 0} # seleccionamos todos los pares
+# => [2,4,6]
+```
+### REDUCIENDO CON ".inject"
+
+El método inject entrega un solo elemento concatenando sucesivamente el resultado de cada iteración.
+```ruby
+a = [1, 2, 3, 4, 5, 6, 7]
+b = a.inject(0){ |sum, x| sum += x } # => 28
+```
+## ABRIR Y LEER UN ARCHIVO
+
+#### Leer todo un archivo y guardarlo en un string
+```ruby
+content = File.read 'file.txt' # Si el archivo no es muy grande
+```
+#### Transformar datos un archivo
+```ruby
+data = File.open('data').read.chomp.split(',')
+```
+#### Leer un archivo de múltiples líneas
+```ruby
+data = File.open('archivo2').readlines
+```
+#### Guardar los resultados
+```ruby
+File.write('/path/to/file', 'datos')
+```
